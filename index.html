@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <title>eAssistant</title>
-<body style="background-image:url('https://wallpaperaccess.com/full/33689.jpg');
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+
+<body onload="startTime()" style="background-image:url('https://wallpaperaccess.com/full/33689.jpg');
   background-repeat: no-repeat;
   background-size: cover;">
 <center>
-<h1><span id="span"></span></h1>
 
-<script>
-var span = document.getElementById('span');
-
-function time() {
-  var d = new Date();
-  var s = d.getSeconds();
-  var m = d.getMinutes();
-  var h = d.getHours();
-  span.textContent = 
-    ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
-}
-
-setInterval(time, 1000);
-</script>
+<div id="txt"></div>
