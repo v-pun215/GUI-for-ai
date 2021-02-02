@@ -1,29 +1,54 @@
 <!DOCTYPE html>
 <title>eAssistant</title>
 <script>
-function pad(num) {return ("0" + num).slice(-2);}
-function time1() {
-  var today = new Date(),
-    h = today.getHours(),
-    m = today.getMinutes(),
-    
-  h = h % 12;
-  h = h ? h : 12; // the hour '0' should be '12'
-  clk.innerHTML = h + ':' + 
-    pad(m) + ':' + 
-    (h >= 12 ? 'AM' : 'PM');
+function currentTime() {
+  var date = new Date(); /* creating object of Date class */
+  var hour = date.getHours();
+  var min = date.getMinutes();
+  var sec = date.getSeconds();
+  var midday = "AM";
+  midday = (hour >= 12) ? "PM" : "AM"; /* assigning AM/PM */
+  hour = (hour == 0) ? 12 : ((hour > 12) ? (hour - 12): hour); /* assigning hour in 12-hour format */
+  hour = updateTime(hour);
+  min = updateTime(min);
+  sec = updateTime(sec);
+  document.getElementById("clock").innerText = hour + " : " + min + " : " + sec + " " + midday; /* adding time to the div */
+    var t = setTimeout(currentTime, 1000); /* setting timer */
 }
-window.onload = function() {
-  var clk = document.getElementById('clk');
-  t = setInterval(time1, 500);
+
+function updateTime(k) { /* appending 0 before time elements if less than 10 */
+  if (k < 10) {
+    return "0" + k;
+  }
+  else {
+    return k;
+  }
 }
+
+currentTime();
 </script>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+body {
+  background-color: #121212;
+}
+
+.clock {
+  font-family: 'Orbitron', sans-serif;
+  color: #66ff99;
+  font-size: 56px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+</style>
 <body style="background-image:url('https://wallpaperaccess.com/full/33689.jpg');
   background-repeat: no-repeat;
   background-size: cover;">
 <center>
 
-<div style="font-size:50px; color:white;" id="clk"></div>
+<div style="font-size:50px; color:white;" id="clock"></div>
 <p style="color:white;" id="dmy"></p>
 <script>
 var d = new Date();
