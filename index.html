@@ -32,7 +32,6 @@ function displayClock(){
   setTimeout(displayClock, 1000); 
 }
 </script>
-<p style="color:white;" id="dmy"></p>
 <script>
 var d = new Date();
     
@@ -43,3 +42,4 @@ var year = d.getFullYear();
 var dateStr = date + "/" + month + "/" + year;
 document.getElementById("dmy").innerHTML = dateStr;
 </script>
+<p style="color:white;" id="dmy"></p>
