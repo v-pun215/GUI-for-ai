@@ -39,8 +39,15 @@ var year = d.getFullYear();
 var dateStr = date + "/" + month + "/" + year;
 document.getElementById("dmy").innerHTML = dateStr;
 </script>
+<style>
+  .button {
+    font-family: Marker Felt, fantasy;
+    background-color: #e7e7e7; color: black;} /* Gray */
+    border-radius:10px; 
+}
+</style>
 <p style="font-family: Marker Felt, fantasy; position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;" onkeydown="myFunction()">Press Any Key To Open <i class="fa fa-arrow-down" aria-hidden="true"></i></p>
-<button onclick="myFunction()">Try it</button>
+<button onclick="myFunction()">Press</button>
 
 <script>
 function myFunction() {
