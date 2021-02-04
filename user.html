@@ -28,7 +28,11 @@ hr {
   border-radius:15px;
 }
 </style>
-<div style="border-radius:15px; background-color:black; opacity: 0.5;">
+<div style="border-radius:15px; -webkit-backdrop-filter: blur(6px); 
+  -moz-backdrop-filter: blur(6px); 
+  -o-backdrop-filter: blur(6px); 
+  -ms-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);">
 <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png" width=200 height=200 />
 <h2>User</h2>
 <a class="button" href="open.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
