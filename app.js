@@ -1,5 +1,6 @@
 document.getElementById("heading").innerHTML =
-  localStorage["user"] || "Start"; // default text
+  localStorage["title"] || "Just Write"; // default text
+
 
 setInterval(function() {
   // fuction that is saving the innerHTML of the div
