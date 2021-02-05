@@ -1,4 +1,4 @@
-document.getElementById("new").innerHTML =
+document.getElementById("heading").innerHTML =
   localStorage["user"] || "Start"; // default text
 
 setInterval(function() {
