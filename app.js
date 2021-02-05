@@ -1,5 +1,5 @@
 document.getElementById("heading").innerHTML =
-  localStorage["title"] || "Just Write"; // default text
+  localStorage["title"] || "Start"; // default text
 
 
 setInterval(function() {
