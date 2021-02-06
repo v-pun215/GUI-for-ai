@@ -42,8 +42,8 @@ hr {
 <hr>
 </center>
 <a class="button" href="shut.html"><i class="fa fa-power-off" aria-hidden="true"></i></a>
-  
-    <p id="OS"></p>  
+<center>
+<p id="OS"></p>  
       
     <!-- Script to display the OS name -->
     <script>  
@@ -52,9 +52,10 @@ hr {
             if (navigator.appVersion.indexOf("Win")!=-1) OSName='<i class="fa fa-windows" aria-hidden="true"></i>'; 
             if (navigator.appVersion.indexOf("Mac")!=-1) OSName='<i class="fa fa-apple" aria-hidden="true"></i>'; 
             if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX"; 
-            if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux"; 
+            if (navigator.appVersion.indexOf("Linux")!=-1) OSName='<i class="fa fa-linux" aria-hidden="true"></i>'; 
               
             // Display the OS name 
             document.getElementById("OS").innerHTML = OSName; 
         }  
     </script>  
+</center>
