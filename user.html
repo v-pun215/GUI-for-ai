@@ -43,14 +43,14 @@ hr {
 </center>
 <a class="button" href="shut.html"><i class="fa fa-power-off" aria-hidden="true"></i></a>
 <center>
-<button class="button" id="OS"></button>  
+<p id="OS"></p>  
       
     <!-- Script to display the OS name -->
     <script>  
         function operatingSytem() {  
             var OSName="Unknown OS"; 
-            if (navigator.appVersion.indexOf("Win")!=-1) OSName='<i class="fa fa-windows" aria-hidden="true"></i>'; 
-            if (navigator.appVersion.indexOf("Mac")!=-1) OSName='<i class="fa fa-apple" aria-hidden="true"></i>'; 
+            if (navigator.appVersion.indexOf("Win")!=-1) OSName='<a href="https://www.microsoft.com/"><i class="fa fa-windows" aria-hidden="true"></i></a>'; 
+            if (navigator.appVersion.indexOf("Mac")!=-1) OSName='<a href="https://www.apple.com/"><i class="fa fa-apple" aria-hidden="true"></i></a>'; 
             if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX"; 
             if (navigator.appVersion.indexOf("Linux")!=-1) OSName='<i class="fa fa-linux" aria-hidden="true"></i>'; 
               
