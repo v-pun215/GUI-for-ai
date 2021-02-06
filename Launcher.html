@@ -1,3 +1,8 @@
 <!DOCTYPE html>
  
-<button onclick="window.open('https://www.google.com','window','toolbar=no, menubar=no, resizable=yes');">Open</button>
+<script>
+navigator.getBattery()
+  .then(function(battery) {
+    console.log(battery.level);
+});
+</script>
