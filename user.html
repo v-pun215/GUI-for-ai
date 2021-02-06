@@ -40,7 +40,14 @@ hr {
 <p>
 </div>
 <p>
-<a class="button" href="shut.html"><i class="fa fa-power-off" aria-hidden="true"></i></a>
+<a class="button" onclick="close_window()"><i class="fa fa-power-off" aria-hidden="true"></i></a>
+<script>
+function close_window() {
+  if (confirm("Close Window?")) {
+    window.close();
+  }
+}
+</script>
 <p>
 <style>
 a {
